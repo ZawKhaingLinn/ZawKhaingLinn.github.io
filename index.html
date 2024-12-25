@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+    <div class="header">
+        <img src="IMG_20230729_170117_110[1].jpg" alt="Us Together">
+        <h1>In you, I've found the love of my life and my closest, truest friend.</h1>
+        <button onclick="smoothScroll('#timeline')">Enter Our Journey</button>
+    </div>
+
+    <div id="timeline" class="section">
+        <h2>Every Moment With You is Golden</h2>
+        <div class="milestone">
+            <h3>First Date</h3>
+            
+                <p>ဘဝမှာ ပထမဆုံး အနေနဲ့ ရုပ်ရှင်ရုံမှာ ကြည့်ဖူးတာ က <br>ဘေဘီ နဲ့ အတူတူ ပထမဆုံး Date တာဘဲ<br> တော်တော် လဲ စိတ်လှုပ်ရှား စရာ ဖြစ်ခဲ့တဲ့ နေ့လေး ပေါ့<br> ရုပ်ရှင်ပြီး တော့ ကိုကို တို့ လှည်းတန်း စင်တာ ရှေ့က လမ်းဘေးဆိုင် မှာ အတူတူ မုန့်ဝယ် စား ခဲ့တာ လဲ အခုထိ မှတ်မိနေတုန်း ဘဲ ပြန်တွေးကြည့်လိုက်ရင် အတူတူ ရှိနေတဲ့ နေ့တွေက ပျော်ရွှင်စရာ တွေ နဲ့ ပြည့်နှက်လို့ နေတယ်  💖</p><br>
+                <p>I love you</p>
+            
+            <img src="IMG_20230724_102820.jpg" alt="First Date">
+        </div>
+
+        <div class="milestone">
+            <h3>First Coffee Date</h3>
+            <p>ကိုကို မှာ တဲ့ ကော်ဖီက ခါး လို့ ဘေ့ဘီ ကော်ဖီကို မောင်ပိုင် စီး တဲ့ ဟာကို တွေးမိတိုင်း ရယ်နေရတုန်းဘဲ 😂</p>
+            <img src="MVIMG_20241008_151910.jpg" alt="First Coffedate">
+        </div>
+
+        <div class="milestone">
+            <h3>Anniversary</h3>
+            <p>တစ်နှစ်နဲ့ ခြောက်လတောင် အတူတူ ရှိ နေလာပြီးပြီ၊ ဘာလို့ အမြဲတမ်း အတွက် မဖြစ် နိုင်ရမှာ လဲ ❣️</p>
+            <video controls>
+                <source src="My video_HD.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="reasons section">
+        <h2> 7 Reasons I Love You</h2>
+        <div class="hearts">
+            <div class="heart" onclick="revealReason()">💖</div>
+        </div>
+        <p id="reason"></p>
+    </div>
+
+    <div class="treasure section">
+        <h2>Find the Hidden Hearts</h2>
+        <div class="hidden-heart" onclick="showLoveLetter()">💌</div>
+    </div>
+
+    <div id="love-letter" class="letter hidden">
+        <h2>To My Dearest Love,</h2>
+        <p>အမြဲတမ်း သည်းခံပြီး ချစ်ပေးလို့ ကျေးဇူး အများကြီး တင်ပါတယ် ဘေဘီ၊ ကိုကို လဲ ဘေဘီ့ကို အများကြီး ချစ်ပေးမယ် ဂရုစိုက် ပေး ပါ့မယ် လို့ ကိုကို ကတိပေးပါတယ်နော် 😘❣️</p>
+        <button onclick="window.location.href='#'">Replay Our Journey</button>
+    </div>
+
+    <script>
+        function revealReason() {
+            const reasons = [
+                'အခက်ခဲဆုံး နေ့တွေ မှာတောင် ဘေ့ဘီ အပြုံးလေး တွေ့ရုံနဲ့ ပျော်နိုင်တယ်',
+                'ကိုကို ဘာဘဲ လုပ်လုပ် အမြဲတမ်း ပံ့ပိုး ဂရုစိုက်ပေးတယ်',
+                'ဘေ့ဘီ အပြုံးနဲ့ ပါးချိုင့် လေးက ကိုကို့ အတွက် အသက်ဘဲ',
+                'ဘေဘီနဲ့ ရှိနေရင် အရာရာ ဟာ လွတ်လပ်ပေါ့ပါးနေတယ်',
+                'ကိုကို့ ကို အမြဲတမ်း ယုံကြည်ပေးတာ တွေ',
+                'ဘေ့ဘီ ရဲ့ ကြင်နာမှု တွေ',
+                'ကိုကို့ ပါးကို ညင်ညင်သာသာ နမ်းရှိက်မှုတွေ',
+                
+                
+            ];
+            const randomReason = reasons[Math.floor(Math.random() * reasons.length)];
+            document.getElementById('reason').textContent = randomReason;
+        }
+
+        function showLoveLetter() {
+            document.getElementById('love-letter').classList.remove('hidden');
+            confettiAnimation();
+        }
+
+        function smoothScroll(target) {
+            document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function confettiAnimation() {
+            const confetti = document.createElement('div');
+            confetti.innerHTML = '🎉🎉🎉';
+            confetti.className = 'confetti';
+            document.body.appendChild(confetti);
+            setTimeout(() => confetti.remove(), 3000);
+        }
+    </script>
+</body>
+</html>
